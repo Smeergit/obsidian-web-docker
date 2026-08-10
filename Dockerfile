@@ -8,7 +8,7 @@ RUN apt-get update \
     && update-ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/MusiCode1/obsidian-web.git .
-RUN node scripts/update-obsidian-mobile.js
+RUN node scripts/update-obsidian-mobile.js --version 1.12.7
 WORKDIR /app/src/runtime-server/server
 RUN npm install
 EXPOSE 3000
